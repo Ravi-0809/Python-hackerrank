@@ -1,0 +1,21 @@
+if __name__ == '__main__':
+	N = int(raw_input())
+	l = []
+	cls = []
+	index = []
+	finalnames = []
+	for i in range(N):
+		name = str(raw_input())
+		score = float(raw_input())
+		l = [name , score]
+		cls.append(l)
+	if N <= 5 and N >= 2:
+		cls.sort(key = lambda x:x[1])
+		sec_lowest = cls[1][1]
+		for j in range(len(cls)):
+			if cls[j][1] == sec_lowest:
+				finalnames.append(cls[j][0])
+		finalnames.sort()
+		for k in range(len(finalnames)):
+			print finalnames[k]
+	
